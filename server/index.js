@@ -48,6 +48,10 @@ function sendEmail({sender, email, subject, message}){
     });
 }
 
+app.get('/', (req, res) => {
+  res.send('Hello from root!');
+});
+
 app.post("/send", (req, res) => {
     sendEmail(req.body)
     .then((response) => res.send(response.message))
