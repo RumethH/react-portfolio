@@ -32,7 +32,7 @@ export const PROJECTS = [
     description:
       "A mobile charity app built with React Native that connects donors with causes they care about.",
     technologies: ["Expo", "React", "Javascript"],
-    github: "https://github.com"
+    github: "https://github.com/RumethH/charity-app"
   },
   {
     title: "Portfolio Website",
@@ -40,7 +40,7 @@ export const PROJECTS = [
     description:
       "An responsive portfolio website (this one) made in React to showcase myself.",
     technologies: ["React", "Tailwindcss", "Javascript", "Nodemailer"],
-    github: "https://google.com"
+    github: "https://github.com/RumethH/react-portfolio"
   },
   {
     title: "Mini-Golf Game",
@@ -48,7 +48,7 @@ export const PROJECTS = [
     description:
       "Fun little golf game application made using Processing.",
     technologies: ["Processing"],
-    github: "https://bing.com"
+    github: "https://github.com/RumethH/minigolf-game"
   },
 ];
 
