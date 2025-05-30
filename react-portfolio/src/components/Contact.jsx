@@ -15,7 +15,7 @@ const Contact = () => {
     e.preventDefault(); 
 
     axios
-      .post("https://react-portfolio-server-zeta.vercel.app/send", {
+      .post("https://react-portfolio-server-zeta.vercel.app", {
         sender,
         email,
         subject,
