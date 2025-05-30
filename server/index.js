@@ -59,5 +59,5 @@ app.post("/send", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`nodemailer is listening at http://localhost:${port}`)
+    console.log(`nodemailer is listening at https://react-portfolio-server-zeta.vercel.app`)
 });
