@@ -12,10 +12,15 @@ const Contact = () => {
   const [message, setMessage] = useState();
 
   const sendMail = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
+    const apiUrl = import.meta.env.VITE_API_URL || (import.meta.env.DEV ? "http://localhost:4000" : "");
+    if (!apiUrl) {
+      alert("Contact form is not configured. Set VITE_API_URL to your backend URL.");
+      return;
+    }
     axios
-      .post("https://react-portfolio-server-zeta.vercel.app", {
+      .post(`${apiUrl}/send`, {
         sender,
         email,
         subject,

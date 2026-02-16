@@ -2,7 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 
 app.use(cors());
 app.use(express.json({limit: "25mb"}));
@@ -14,12 +14,16 @@ app.use((req, res, next) => {
 
 function sendEmail({sender, email, subject, message}){
     return new Promise((resolve, reject) => {
+        const gmailUser = process.env.GMAIL_USER || "rh3rath100@gmail.com";
+        const gmailAppPassword = process.env.GMAIL_APP_PASSWORD || "";
+        if (!gmailAppPassword) {
+            return reject({ message: "Server: GMAIL_APP_PASSWORD not set" });
+        }
         var transporter = nodemailer.createTransport({
-            service: "gmail", 
+            service: "gmail",
             auth: {
-                user: "rh3rath100@gmail.com",
-                pass: "tvjj mgqw hggd uawy"
-
+                user: gmailUser,
+                pass: gmailAppPassword
             }
         });
 
@@ -59,5 +63,5 @@ app.post("/send", (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`nodemailer is listening at https://react-portfolio-server-zeta.vercel.app`)
+    console.log(`Server listening on port ${port}`);
 });
