@@ -1,6 +1,6 @@
 # Deploy your portfolio for free (GitHub Pages + Render)
 
-This setup uses **GitHub Pages** for the frontend and **Render** for the backend so you can share your site with anyone, for free, without Vercel.
+This setup uses **GitHub Pages** for the frontend and **Render** for the backend so you can share your site with anyone, for free.
 
 ---
 
