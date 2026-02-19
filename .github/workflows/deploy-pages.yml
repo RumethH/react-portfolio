@@ -5,7 +5,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    # Trigger on the common default branch names so deploy runs even if repo uses 'master'
+    branches: [main, master]
 
 permissions:
   contents: read
@@ -36,7 +37,7 @@ jobs:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Prepare artifact for project site
