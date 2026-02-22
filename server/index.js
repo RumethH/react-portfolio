@@ -19,18 +19,28 @@ function sendEmail({sender, email, subject, message}){
         if (!gmailAppPassword) {
             return reject({ message: "Server: GMAIL_APP_PASSWORD not set" });
         }
+        // Explicit SMTP settings to avoid timeouts and make debugging easier.
+        // If Gmail blocks connections from the platform, consider using a relay
+        // (SendGrid/Mailgun/Postmark) with an API key which is more reliable.
         var transporter = nodemailer.createTransport({
-            service: "gmail",
+            host: "smtp.gmail.com",
+            port: 465,
+            secure: true, // use TLS
             auth: {
                 user: gmailUser,
                 pass: gmailAppPassword
-            }
+            },
+            // timeouts (ms)
+            connectionTimeout: 10000,
+            greetingTimeout: 10000,
+            socketTimeout: 10000,
         });
 
+        // Send to your configured Gmail address and set reply-to to the visitor.
         const mail_configs = {
-            from: "example@gmail.com",
-            sender,
-            to: email,
+            from: gmailUser,
+            to: gmailUser,
+            replyTo: email,
             subject,
             html: `
             <p>Hi, Rumeth</p>
@@ -40,12 +50,18 @@ function sendEmail({sender, email, subject, message}){
             `,
         };
 
+        console.log(`Attempting SMTP send to ${mail_configs.to} via smtp.gmail.com:465`);
         transporter.sendMail(mail_configs, function (error, info) {
             if(error){
-                console.log(error);
-                return reject({message: 'An error occurred'})
+                console.error('Email send error:', {
+                    message: error.message,
+                    code: error.code,
+                    stack: error.stack
+                });
+                return reject({message: 'An error occurred', details: error.message})
             }
-            
+
+            console.log('Email sent:', info && info.response);
             return resolve({message: 'Email sent successfully'});
         });
 
