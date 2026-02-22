@@ -2,27 +2,44 @@ import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
 
-export const HERO_CONTENT = `Hi, I am an passionate junior software engineer finishing up my studies at Macquarie University. Passionate about tech and innovation, I aim to build impactful software solutions that drive real-world change.`;
+export const HERO_CONTENT = `Hi, I’m a Junior Software Engineer specialising in AI and backend systems.
+I build scalable, production-ready software that solves real-world problems.`;
 
-export const ABOUT_TEXT = `A passionate junior software engineer currently completing my Bachelor of Software Engineering at Macquarie University. With hands-on experience from my internship at Advent Atum, I’ve worked on real-world applications involving AI, OS imaging, and technical support.
+export const ABOUT_TEXT = `I’m a Junior Software Engineer based in Sydney with hands-on experience building production-ready AI and backend systems.
 
-I’m driven by a deep interest in technology and a commitment to continuous learning. Whether it's contributing to impactful projects, building full-stack applications, or exploring cutting-edge innovations, I strive to create solutions that make a real-world difference. I'm always open to new challenges and opportunities to grow as a developer and engineer.`;
+During my time at Advent Atum, I’ve worked across computer vision pipelines, machine learning model development, backend services, and AI-integrated mobile applications. My work has involved designing scalable systems, improving performance and reliability, and contributing to real-world deployments.
+
+I’m particularly interested in AI-driven systems, backend architecture, and building software that performs reliably in production environments. I care about writing clean, maintainable code and continuously improving my engineering skills as I grow into a full-time software engineer.`;
 
 export const EXPERIENCES = [
   {
-    year: "Jul 2024 - Mar 2025",
-    role: "AI Software Engineering Intern",
-    company: "Advent Atum",
-    description: `I assisted in the development of image recognition and LSTM models, contributing to the enhancement of AI-driven applications. My work involved using computer vision libraries to improve functionality and accuracy. I also played a key role in optimizing deep learning models for better performance. Additionally, I contributed to the development of new features in an Android application built with Flutter.`,
-    technologies: ["Python", "Flutter", "Pytorch", "REST APIs"],
+  year: "Jan 2025 - Present",
+  role: "Software Engineer",
+  company: "Advent Atum",
+  description: "Contributing to production-grade AI and backend systems, improving performance, scalability, and reliability while supporting service optimisation and migration to Rust.",
+  technologies: ["Python", "Rust", "Backend Systems", "CI/CD", "Linux", "APIs"]
   },
   {
-    year: "May 2018 - June 2018",
+    year: "May 2025 - Dec 2025",
+    role: "AI Data Engineer (Casual)",
+    company: "Advent Atum",
+    description: "Collaborated on training, testing, and deploying computer vision models for real-world drone detection systems while improving debugging workflows and system reliability.",
+    technologies: ["Python", "PyTorch", "AI Pipelines", "Testing", "Debugging"]
+  },
+  {
+    year: "Jul 2024 - Mar 2025",
+    role: "AI Software Engineer Intern",
+    company: "Advent Atum",
+    description: "Developed and optimised deep learning models and contributed to AI-integrated Flutter applications, supporting end-to-end computer vision pipelines.",
+    technologies: ["Python", "PyTorch", "Flutter", "REST APIs", "Git"]
+  },
+  {
+    year: "May 2018",
     role: "Techbar IT Support",
     company: "Woolworths Group",
-    description: `Completed my required work experience for year 10 conducting tasks such as re-imaging operating systems and setting up new devices for employees.`,
-    technologies: ["OS Imaging", "Communication"],
-  },
+    description: "Provided operating system re-imaging, device setup, and technical support to ensure smooth hardware and software deployment.",
+    technologies: ["OS Imaging", "Technical Support"]
+  }
 ];
 
 export const PROJECTS = [

@@ -33,7 +33,7 @@ const About = () => {
                     animate="visible"
                     className="bg-gradient-to-r from-pink-300 via-slate-500 
                     to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent">
-                        Junior Software Engineer
+                        Software Engineer
                     </motion.span>
                     <motion.p 
                     variants={container(1)}
@@ -45,8 +45,8 @@ const About = () => {
 
                     
                     <motion.a
-                    href="/RumethHerath_Resume.pdf"
-                    download="Rumeth_Herath_Resume.pdf"
+                    href={`${import.meta.env.BASE_URL}RumethHerath_resume.pdf`}
+                    download="Rumeth_Herath_resume.pdf"
                     variants={container(1.5)}
                     initial="hidden"
                     animate="visible"
