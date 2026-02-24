@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://RumethH.github.io/react-portfolio-1",
+  "homepage": "https://RumethH.github.io/react-portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
