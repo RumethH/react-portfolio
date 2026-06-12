@@ -1,6 +1,6 @@
 import { PROJECTS } from "../constants";
 import { motion } from "motion/react";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 const Projects = () => {
   return (
@@ -34,14 +34,28 @@ const Projects = () => {
                 className="rounded-xl object-cover w-full"
               />
             
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-4 right-4 text-purple-300 transition hover:text-purple-500"
-              >
-                <FiGithub size={24} />
-              </a>
+              <div className="absolute bottom-4 right-4 flex gap-3 text-purple-300">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition hover:text-purple-500"
+                  aria-label={`${project.title} github repository`}
+                >
+                  <FiGithub size={24} />
+                </a>
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition hover:text-purple-500"
+                    aria-label={`${project.title} live demo`}
+                  >
+                    <FiExternalLink size={24} />
+                  </a>
+                )}
+              </div>
             </motion.div>
 
             <motion.div

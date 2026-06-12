@@ -1,11 +1,12 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
 import project3 from "../assets/projects/project-3.jpg";
+import project4 from "../assets/projects/project-4.jpeg";
 
-export const HERO_CONTENT = `Hi, I’m a Junior Software Engineer specialising in AI and backend systems.
+export const HERO_CONTENT = `Hi, I’m a Software Engineer specialising in AI and backend systems.
 I build scalable, production-ready software that solves real-world problems.`;
 
-export const ABOUT_TEXT = `I’m a Junior Software Engineer based in Sydney with hands-on experience building production-ready AI and backend systems.
+export const ABOUT_TEXT = `I’m a Software Engineer based in Sydney with hands-on experience building production-ready AI and backend systems.
 
 During my time at Advent Atum, I’ve worked across computer vision pipelines, machine learning model development, backend services, and AI-integrated mobile applications. My work has involved designing scalable systems, improving performance and reliability, and contributing to real-world deployments.
 
@@ -13,7 +14,7 @@ I’m particularly interested in AI-driven systems, backend architecture, and bu
 
 export const EXPERIENCES = [
   {
-  year: "Jan 2025 - Present",
+  year: "Jan 2026 - Present",
   role: "Software Engineer",
   company: "Advent Atum",
   description: "Contributing to production-grade AI and backend systems, improving performance, scalability, and reliability while supporting service optimisation and migration to Rust.",
@@ -66,6 +67,15 @@ export const PROJECTS = [
       "Fun little golf game application made using Processing.",
     technologies: ["Processing"],
     github: "https://github.com/RumethH/minigolf-game"
+  },
+  {
+    title: "Gov-Policy-Insight-RAG",
+    image: project4,
+    description:
+      "RAG application for government policy analysis.",
+    technologies: ["Python", "Streamlit", "AWS Clous", "Docker", "FastAPI"],
+    github: "https://github.com/RumethH/Gov-Policy-Insight",
+    demo: "https://go-5595fec1ed404b769a518c290d28ad7f.ecs.us-east-1.on.aws/"
   },
 ];
 

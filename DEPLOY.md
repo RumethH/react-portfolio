@@ -17,7 +17,6 @@ Server runs at `http://localhost:4000`. Use a [Gmail App Password](https://suppo
 
 **Terminal 2 – frontend:**
 ```bash
-cd react-portfolio
 npm install
 npm run dev
 ```

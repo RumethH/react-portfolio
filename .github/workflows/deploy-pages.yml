@@ -30,7 +30,6 @@ jobs:
           node-version: "20"
 
       - name: Install and build
-        working-directory: react-portfolio
         env:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
           VITE_BASE_PATH: /${{ github.event.repository.name }}/
@@ -44,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: react-portfolio/dist
+          path: dist
 
   deploy:
     environment:
