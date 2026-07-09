@@ -73,9 +73,9 @@ export const PROJECTS = [
     image: project4,
     description:
       "RAG application for government policy analysis.",
-    technologies: ["Python", "Streamlit", "AWS Clous", "Docker", "FastAPI"],
+    technologies: ["Python", "Streamlit", "AWS Cloud", "Docker", "FastAPI"],
     github: "https://github.com/RumethH/Gov-Policy-Insight",
-    demo: "https://go-5595fec1ed404b769a518c290d28ad7f.ecs.us-east-1.on.aws/"
+    demo: "https://chat-gpi.com/"
   },
 ];
 
